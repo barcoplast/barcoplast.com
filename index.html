@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BARCOPLAST — Resinas Poliéster y Epoxi | Envíos a todo el país</title>
+<meta name="description" content="40 años de experiencia en resinas poliéster y epoxi para náutica, construcción e industria. Asesoramiento técnico gratuito. Envíos a todo Argentina.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0b1a2e;
+    --navy-mid: #112240;
+    --navy-light: #1a3355;
+    --steel: #2a5298;
+    --orange: #f5820a;
+    --orange-dark: #d96e08;
+    --white: #f4f6f9;
+    --text: #c8d3e0;
+    --text-dim: #7a8fa8;
+    --border: rgba(255,255,255,0.08);
+    --card-bg: rgba(255,255,255,0.04);
+    --font-display: 'Barlow Condensed', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--navy); color: var(--white); font-family: var(--font-body); font-size: 16px; line-height: 1.6; overflow-x: hidden; }
+
+  /* ── HEADER ── */
+  header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(11,26,46,0.95); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+  }
+  .logo { display: flex; flex-direction: column; }
+  .logo-name { font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: 0.12em; color: var(--white); }
+  .logo-sub { font-size: 10px; letter-spacing: 0.2em; color: var(--orange); text-transform: uppercase; font-weight: 600; }
+  nav { display: flex; gap: 28px; }
+  nav a { text-decoration: none; font-size: 14px; font-weight: 500; color: var(--text-dim); letter-spacing: 0.04em; transition: color 0.2s; }
+  nav a:hover { color: var(--white); }
+  .header-cta {
+    background: #25D366; color: #fff; border: none; border-radius: 6px;
+    padding: 9px 18px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+    cursor: pointer; display: flex; align-items: center; gap: 7px; transition: background 0.2s;
+    text-decoration: none;
+  }
+  .header-cta:hover { background: #1db954; }
+  .wa-icon { width: 16px; height: 16px; fill: #fff; }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative; overflow: hidden;
+    min-height: 88vh; display: flex; align-items: center;
+    padding: 80px 5% 60px;
+    background: var(--navy);
+  }
+  .hero-bg {
+    position: absolute; inset: 0; z-index: 0;
+    background: 
+      radial-gradient(ellipse 60% 60% at 70% 50%, rgba(42,82,152,0.18) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 50% at 20% 80%, rgba(245,130,10,0.08) 0%, transparent 60%);
+  }
+  .hero-grid-lines {
+    position: absolute; inset: 0; z-index: 0; opacity: 0.04;
+    background-image: linear-gradient(var(--white) 1px, transparent 1px), linear-gradient(90deg, var(--white) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 640px; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(245,130,10,0.12); border: 1px solid rgba(245,130,10,0.3);
+    border-radius: 99px; padding: 5px 14px;
+    font-size: 12px; font-weight: 600; color: var(--orange);
+    letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 24px;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--orange); animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  h1 {
+    font-family: var(--font-display); font-size: clamp(44px, 7vw, 80px);
+    font-weight: 800; line-height: 1.0; letter-spacing: 0.02em;
+    text-transform: uppercase; margin-bottom: 20px;
+  }
+  h1 em { color: var(--orange); font-style: normal; }
+  .hero-desc { font-size: 17px; font-weight: 300; color: var(--text); max-width: 500px; margin-bottom: 36px; line-height: 1.7; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange); color: #fff; border: none; border-radius: 7px;
+    padding: 14px 28px; font-size: 15px; font-weight: 600; cursor: pointer;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .btn-secondary {
+    background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 7px; padding: 14px 28px; font-size: 15px; font-weight: 500; cursor: pointer;
+    text-decoration: none; transition: border-color 0.2s, background 0.2s;
+  }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.05); }
+  .hero-image {
+    position: absolute; right: 5%; top: 50%; transform: translateY(-50%);
+    width: 42%; max-width: 560px; z-index: 1; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px var(--border);
+    opacity: 0.85;
+  }
+  .hero-image img { width: 100%; display: block; }
+  .hero-image-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(11,26,46,0.4) 0%, transparent 60%);
+  }
+
+  /* ── STATS BAR ── */
+  .stats-bar {
+    background: var(--navy-mid); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 28px 5%;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  }
+  .stat { text-align: center; padding: 0 20px; }
+  .stat + .stat { border-left: 1px solid var(--border); }
+  .stat-num { font-family: var(--font-display); font-size: 42px; font-weight: 800; color: var(--orange); line-height: 1; }
+  .stat-label { font-size: 12px; color: var(--text-dim); margin-top: 4px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
+
+  /* ── SECTIONS ── */
+  section { padding: 80px 5%; }
+  .section-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+  h2 { font-family: var(--font-display); font-size: clamp(32px, 4vw, 52px); font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.1; margin-bottom: 12px; }
+  .section-desc { font-size: 16px; color: var(--text); max-width: 520px; }
+  .section-header { margin-bottom: 48px; }
+  .section-header.centered { text-align: center; }
+  .section-header.centered .section-desc { margin: 0 auto; }
+
+  /* ── PRODUCTS ── */
+  .products-section { background: var(--navy); }
+  .category-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+  .tab { background: var(--card-bg); border: 1px solid var(--border); color: var(--text-dim); border-radius: 99px; padding: 7px 18px; font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+  .tab:hover { color: var(--white); border-color: rgba(255,255,255,0.2); }
+  .tab.active { background: var(--orange); border-color: var(--orange); color: #fff; }
+  .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+  .product-card {
+    background: var(--card-bg); border: 1px solid var(--border);
+    border-radius: 12px; overflow: hidden; transition: border-color 0.2s, transform 0.2s;
+    cursor: pointer;
+  }
+  .product-card:hover { border-color: rgba(245,130,10,0.4); transform: translateY(-3px); }
+  .product-img { width: 100%; height: 200px; object-fit: cover; background: var(--navy-light); display: block; }
+  .product-img-placeholder { width: 100%; height: 200px; background: var(--navy-light); display: flex; align-items: center; justify-content: center; }
+  .product-info { padding: 16px; }
+  .product-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; }
+  .product-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
+  .product-desc { font-size: 13px; color: var(--text-dim); line-height: 1.5; margin-bottom: 12px; }
+  .product-sizes { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 14px; }
+  .size-tag { font-size: 11px; background: rgba(255,255,255,0.06); border: 1px solid var(--border); border-radius: 4px; padding: 2px 8px; color: var(--text-dim); }
+  .product-cta {
+    width: 100%; background: rgba(245,130,10,0.1); border: 1px solid rgba(245,130,10,0.3);
+    color: var(--orange); border-radius: 6px; padding: 9px; font-size: 13px; font-weight: 600;
+    cursor: pointer; transition: all 0.2s; text-align: center; text-decoration: none; display: block;
+  }
+  .product-cta:hover { background: var(--orange); color: #fff; border-color: var(--orange); }
+
+  /* ── APPLICATIONS ── */
+  .apps-section { background: var(--navy-mid); }
+  .apps-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .app-card {
+    background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 24px 20px; text-align: center; transition: border-color 0.2s;
+  }
+  .app-card:hover { border-color: rgba(42,82,152,0.5); }
+  .app-icon { font-size: 32px; margin-bottom: 12px; }
+  .app-name { font-family: var(--font-display); font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--white); margin-bottom: 6px; }
+  .app-desc { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+  /* ── WHY US ── */
+  .why-section { background: var(--navy); }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .why-list { list-style: none; display: flex; flex-direction: column; gap: 20px; }
+  .why-item { display: flex; gap: 16px; align-items: flex-start; }
+  .why-icon-wrap { width: 44px; height: 44px; min-width: 44px; background: rgba(245,130,10,0.12); border: 1px solid rgba(245,130,10,0.25); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .why-text strong { display: block; font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 3px; }
+  .why-text span { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+  .why-visual {
+    background: var(--navy-mid); border: 1px solid var(--border); border-radius: 16px;
+    padding: 36px; position: relative; overflow: hidden;
+  }
+  .why-visual::before {
+    content: '40'; position: absolute; right: -10px; bottom: -20px;
+    font-family: var(--font-display); font-size: 180px; font-weight: 800; color: rgba(255,255,255,0.03); line-height: 1;
+  }
+  .testimonial-list { display: flex; flex-direction: column; gap: 16px; }
+  .testimonial { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+  .testimonial p { font-size: 13px; color: var(--text); font-style: italic; line-height: 1.6; margin-bottom: 10px; }
+  .testimonial-author { display: flex; align-items: center; gap: 8px; }
+  .author-avatar { width: 28px; height: 28px; border-radius: 50%; background: var(--steel); display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; }
+  .author-name { font-size: 12px; font-weight: 600; color: var(--white); }
+  .author-role { font-size: 11px; color: var(--text-dim); }
+  .stars { color: #f5c842; font-size: 12px; margin-bottom: 4px; }
+
+  /* ── CONTACT / CTA ── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%);
+    border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 80px 5%; text-align: center;
+  }
+  .cta-section h2 { font-size: clamp(32px, 5vw, 60px); margin-bottom: 16px; }
+  .cta-section p { font-size: 16px; color: var(--text); max-width: 500px; margin: 0 auto 36px; }
+  .cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-wa {
+    background: #25D366; color: #fff; border: none; border-radius: 8px;
+    padding: 16px 36px; font-size: 16px; font-weight: 700; cursor: pointer;
+    display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-wa:hover { background: #1db954; transform: translateY(-2px); }
+  .contact-info { display: flex; gap: 40px; justify-content: center; margin-top: 48px; flex-wrap: wrap; }
+  .contact-item { text-align: center; }
+  .contact-item .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); font-weight: 600; margin-bottom: 4px; }
+  .contact-item .value { font-size: 14px; color: var(--white); font-weight: 500; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #070f1c; border-top: 1px solid var(--border);
+    padding: 48px 5% 32px;
+  }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-brand .logo-name { font-size: 24px; margin-bottom: 4px; }
+  .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.6; margin-top: 12px; max-width: 260px; }
+  .footer-col h4 { font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+  .footer-col ul li a { font-size: 13px; color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--white); }
+  .footer-bottom { border-top: 1px solid var(--border); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-bottom p { font-size: 12px; color: var(--text-dim); }
+
+  /* ── FLOATING WA ── */
+  .float-wa {
+    position: fixed; bottom: 28px; right: 28px; z-index: 999;
+    width: 56px; height: 56px; background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+    animation: float 3s ease-in-out infinite;
+  }
+  .float-wa:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+  .float-wa svg { width: 28px; height: 28px; fill: #fff; }
+  .float-wa-tooltip {
+    position: absolute; right: 64px; background: #111; color: #fff; border-radius: 6px;
+    padding: 6px 12px; font-size: 12px; font-weight: 500; white-space: nowrap;
+    opacity: 0; pointer-events: none; transition: opacity 0.2s;
+  }
+  .float-wa:hover .float-wa-tooltip { opacity: 1; }
+
+  /* ── CATEGORY SECTIONS ── */
+  .cat-section-label {
+    font-family: var(--font-display); font-size: 13px; font-weight: 700;
+    letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-dim);
+    margin: 40px 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .cat-section-label::before { content: ''; width: 20px; height: 2px; background: var(--orange); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { display: none; }
+    .hero { padding: 100px 5% 60px; min-height: auto; }
+    .hero-image { display: none; }
+    h1 { font-size: 48px; }
+    .stats-bar { grid-template-columns: repeat(2, 1fr); }
+    .stat + .stat:nth-child(3) { border-left: none; }
+    .why-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; }
+    .float-wa { bottom: 20px; right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <span class="logo-name">BARCOPLAST</span>
+    <span class="logo-sub">Resinas Poliéster & Epoxi</span>
+  </div>
+  <nav>
+    <a href="#productos">Productos</a>
+    <a href="#aplicaciones">Aplicaciones</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Vi%20la%20web%20de%20BARCOPLAST%20y%20quiero%20consultar." class="header-cta" target="_blank">
+    <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Consultar ahora
+  </a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid-lines"></div>
+  <div class="hero-content">
+    <div class="hero-badge">40 años de experiencia</div>
+    <h1>Resinas<br><em>Poliéster</em><br>y Epoxi</h1>
+    <p class="hero-desc">Materiales de alta calidad para náutica, construcción e industria. Asesoramiento técnico personalizado. Enviamos a todo el país.</p>
+    <div class="hero-actions">
+      <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20cotizar%20resinas." class="btn-primary" target="_blank">
+        <svg style="width:17px;height:17px;fill:#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Cotizar por WhatsApp
+      </a>
+      <a href="#productos" class="btn-secondary">Ver productos</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="https://barcoplast.com/wp-content/uploads/2023/10/img_6892.jpg" alt="Resina náutica BARCOPLAST" onerror="this.parentElement.style.display='none'">
+    <div class="hero-image-overlay"></div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stat">
+    <div class="stat-num">40</div>
+    <div class="stat-label">Años de experiencia</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">23</div>
+    <div class="stat-label">Provincias con envíos</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">+200</div>
+    <div class="stat-label">Clientes activos</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">24hs</div>
+    <div class="stat-label">Respuesta técnica</div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="productos">
+  <div class="section-header">
+    <p class="section-tag">Catálogo completo</p>
+    <h2>Nuestros productos</h2>
+    <p class="section-desc">Resinas, catalizadores, fibras y accesorios para cada proyecto industrial y artesanal.</p>
+  </div>
+
+  <div class="cat-section-label">Resinas</div>
+  <div class="products-grid">
+
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/10/img_6892.jpg" alt="Resina Náutica" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Resina</div>
+        <div class="product-name">Resina Náutica Común</div>
+        <div class="product-desc">Preacelerada, ideal para trabajos en fibra de vidrio náuticos e industriales. Alto rendimiento.</div>
+        <div class="product-sizes">
+          <span class="size-tag">1 kg</span>
+          <span class="size-tag">5 kg</span>
+          <span class="size-tag">20 kg</span>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20N%C3%A1utica%20Com%C3%BAn." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/10/img_6895.jpg" alt="Resina Epoxy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Resina</div>
+        <div class="product-name">Resina Epoxi</div>
+        <div class="product-desc">Sistema bicomponente Parte A + Parte B. Excelente adherencia y resistencia química.</div>
+        <div class="product-sizes">
+          <span class="size-tag">1L (A) + 45g (B)</span>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Epoxi." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/10/img_6898.jpg" alt="Resina Cristal" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Resina</div>
+        <div class="product-name">Resina Cristal</div>
+        <div class="product-desc">Alta transparencia. Ideal para encapsulados, bijouterie, decoración y arte resinado.</div>
+        <div class="product-sizes">
+          <span class="size-tag">1 kg</span>
+          <span class="size-tag">5 kg</span>
+          <span class="size-tag">20 kg</span>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Cristal." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/10/whatsapp-image-2023-09-06-at-12.52.53-5-edited.jpeg" alt="Resina Flex" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Resina</div>
+        <div class="product-name">Resina Flex</div>
+        <div class="product-desc">Alta flexibilidad una vez curada. Para piezas que requieren resistencia a impactos y vibración.</div>
+        <div class="product-sizes">
+          <span class="size-tag">1 kg</span>
+          <span class="size-tag">5 kg</span>
+          <span class="size-tag">20 kg</span>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Flex." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/10/img_6889.jpg" alt="Catalizador MEK" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Catalizador</div>
+        <div class="product-name">Catalizador MEK</div>
+        <div class="product-desc">Peróxido de metil etil cetona. Iniciador de curado para resinas poliéster. Alta pureza.</div>
+        <div class="product-sizes">
+          <span class="size-tag">30ml</span>
+          <span class="size-tag">50ml</span>
+          <span class="size-tag">100ml</span>
+          <span class="size-tag">1L</span>
+          <span class="size-tag">5L</span>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Catalizador%20MEK." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/10/whatsapp-image-2023-09-06-at-12.52.53-1.jpeg" alt="Acelerador de Cobalto" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Acelerador</div>
+        <div class="product-name">Acelerador de Cobalto 2%</div>
+        <div class="product-desc">Reduce el tiempo de gelificación. Formulado al 2% para mayor control en el proceso de curado.</div>
+        <div class="product-sizes">
+          <span class="size-tag">30ml</span>
+          <span class="size-tag">50ml</span>
+          <span class="size-tag">100ml</span>
+          <span class="size-tag">1L</span>
+          <span class="size-tag">5L</span>
+        </div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Acelerador%20de%20Cobalto." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cat-section-label">Fibras</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/08/img_6894.jpg" alt="Tela de fibra" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Fibra</div>
+        <div class="product-name">Tela de fibra de vidrio</div>
+        <div class="product-desc">Disponible por metro o rollo. Refuerzo estructural liviano para todo tipo de laminados.</div>
+        <div class="product-sizes"><span class="size-tag">Por metro</span><span class="size-tag">Por rollo</span></div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Tela%20de%20fibra." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/08/photo-2023-08-28-12-03-10-1.jpg" alt="Fibra de vidrio 300/450" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Fibra</div>
+        <div class="product-name">Fibra de vidrio 300/450</div>
+        <div class="product-desc">Mat de fibra cortada. Los gramajes 300 y 450 g/m² para laminados estándar e industriales.</div>
+        <div class="product-sizes"><span class="size-tag">300 g/m²</span><span class="size-tag">450 g/m²</span></div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Fibra%20de%20vidrio%20300/450." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/08/20230828_121841-edited.jpg" alt="Corematt" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Fibra</div>
+        <div class="product-name">Corematt</div>
+        <div class="product-desc">Material de núcleo para sándwich estructural. Reduce peso y aumenta la rigidez de la pieza.</div>
+        <div class="product-sizes"><span class="size-tag">Por metro</span><span class="size-tag">Por rollo</span></div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Corematt." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-section-label">Accesorios y herramientas</div>
+  <div class="products-grid">
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/09/whatsapp-image-2023-09-06-at-12.54.05.jpeg" alt="Rodillo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Accesorio</div>
+        <div class="product-name">Rodillo laminador</div>
+        <div class="product-desc">Para aplicación y desgasificación de laminados. Elimina burbujas en fibra y resina.</div>
+        <div class="product-sizes"><span class="size-tag">Varios tamaños</span></div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20rodillo." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/09/whatsapp-image-2023-09-06-at-12.52.53-2.jpeg" alt="Limpiador de resina" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Producto</div>
+        <div class="product-name">Limpiador de resina</div>
+        <div class="product-desc">Solvente especializado para limpieza de herramientas y superficies con resina sin curar.</div>
+        <div class="product-sizes"><span class="size-tag">Varios formatos</span></div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20limpiador%20de%20resina." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <img class="product-img" src="https://barcoplast.com/wp-content/uploads/2023/09/whatsapp-image-2023-09-06-at-12.52.53-3.jpeg" alt="Diluyente" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%25%22 height=%22200%22><rect fill=%22%231a3355%22 width=%22100%25%22 height=%22200%22/></svg>'">
+      <div class="product-info">
+        <div class="product-cat">Producto</div>
+        <div class="product-name">Diluyente</div>
+        <div class="product-desc">Para ajustar la viscosidad de resinas poliéster. Control preciso de la consistencia del material.</div>
+        <div class="product-sizes"><span class="size-tag">Varios formatos</span></div>
+        <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20diluyente." class="product-cta" target="_blank">Consultar precio →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="apps-section" id="aplicaciones">
+  <div class="section-header centered">
+    <p class="section-tag">¿Para qué se usa?</p>
+    <h2>Aplicaciones principales</h2>
+    <p class="section-desc">Nuestros materiales están presentes en los rubros más exigentes de Argentina.</p>
+  </div>
+  <div class="apps-grid">
+    <div class="app-card">
+      <div class="app-icon">⚓</div>
+      <div class="app-name">Náutica</div>
+      <div class="app-desc">Construcción y reparación de cascos, cubiertas y piezas para embarcaciones.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🏗️</div>
+      <div class="app-name">Construcción</div>
+      <div class="app-desc">Impermeabilizaciones, refuerzos estructurales, revestimientos industriales.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🏍️</div>
+      <div class="app-name">Automotriz</div>
+      <div class="app-desc">Carrocerías, aerodinámica, reparación de piezas en fibra de vidrio.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🎨</div>
+      <div class="app-name">Arte & Diseño</div>
+      <div class="app-desc">Encapsulados, bijouterie, mesas resinadas, esculturas y arte decorativo.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">⚙️</div>
+      <div class="app-name">Industria</div>
+      <div class="app-desc">Tanques, recipientes, tuberías y piezas de alta resistencia química.</div>
+    </div>
+    <div class="app-card">
+      <div class="app-icon">🔧</div>
+      <div class="app-name">Reparaciones</div>
+      <div class="app-desc">Parches, sellados y refuerzos en fibra de vidrio para cualquier estructura.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-section" id="nosotros">
+  <div class="why-grid">
+    <div>
+      <p class="section-tag">¿Por qué elegirnos?</p>
+      <h2 style="margin-bottom: 32px;">40 años<br>de respaldo</h2>
+      <ul class="why-list">
+        <li class="why-item">
+          <div class="why-icon-wrap">🚚</div>
+          <div class="why-text">
+            <strong>Envíos a todo el país</strong>
+            <span>Despachamos a todas las provincias. Embalaje seguro para materiales químicos.</span>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-icon-wrap">🧪</div>
+          <div class="why-text">
+            <strong>Asesoramiento técnico gratuito</strong>
+            <span>Te orientamos en qué producto usar según tu aplicación y presupuesto.</span>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-icon-wrap">📦</div>
+          <div class="why-text">
+            <strong>Stock permanente</strong>
+            <span>No trabajamos bajo pedido. Tenemos stock disponible para envío inmediato.</span>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-icon-wrap">💬</div>
+          <div class="why-text">
+            <strong>Atención directa sin intermediarios</strong>
+            <span>Hablás directamente con los especialistas. Sin formularios ni burocracia.</span>
+          </div>
+        </li>
+        <li class="why-item">
+          <div class="why-icon-wrap">🔁</div>
+          <div class="why-text">
+            <strong>Clientes de toda la vida</strong>
+            <span>Muchos de nuestros clientes llevan más de 20 años trabajando con nosotros.</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="why-visual">
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Llevo más de 10 años comprando en BARCOPLAST. La resina náutica es de primera calidad y siempre me asesoraron perfectamente para cada trabajo en mi taller."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MR</div>
+            <div>
+              <div class="author-name">Marcelo R.</div>
+              <div class="author-role">Astillero — Buenos Aires</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Me enviaron todo a Córdoba en tiempo y forma. La resina cristal llegó perfecta y el asesoramiento antes de comprar fue clave para mi proyecto de arte resinado."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">LA</div>
+            <div>
+              <div class="author-name">Laura A.</div>
+              <div class="author-role">Artista — Córdoba</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Excelente calidad de productos y muy buena atención. Recomendables al 100% para trabajo industrial. Los precios son muy competitivos."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JG</div>
+            <div>
+              <div class="author-name">José G.</div>
+              <div class="author-role">Industria — Rosario</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contacto">
+  <p class="section-tag" style="font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Contacto</p>
+  <h2>¿Listo para cotizar<br>tu proyecto?</h2>
+  <p>Respondemos en minutos. Asesoramiento técnico gratuito para ayudarte a elegir el material correcto.</p>
+  <div class="cta-actions">
+    <a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20sobre%20sus%20resinas%20y%20precios." class="btn-wa" target="_blank">
+      <svg style="width:20px;height:20px;fill:#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Escribir por WhatsApp
+    </a>
+    <a href="mailto:contacto@barcoplast.com" class="btn-secondary">Enviar email</a>
+  </div>
+  <div class="contact-info">
+    <div class="contact-item">
+      <div class="label">WhatsApp</div>
+      <div class="value">+54 11 7114-4557</div>
+    </div>
+    <div class="contact-item">
+      <div class="label">Envíos</div>
+      <div class="value">Todo el país</div>
+    </div>
+    <div class="contact-item">
+      <div class="label">Horario de atención</div>
+      <div class="value">Lun–Vie 9 a 18hs</div>
+    </div>
+    <div class="contact-item">
+      <div class="label">Experiencia</div>
+      <div class="value">40 años en el rubro</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo-name">BARCOPLAST</div>
+      <div class="logo-sub">Resinas Poliéster & Epoxi</div>
+      <p>Más de 40 años abasteciendo a la industria náutica, construcción y manufactura de Argentina con materiales de alta calidad.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Productos</h4>
+      <ul>
+        <li><a href="#productos">Resina Náutica</a></li>
+        <li><a href="#productos">Resina Epoxi</a></li>
+        <li><a href="#productos">Resina Cristal</a></li>
+        <li><a href="#productos">Resina Flex</a></li>
+        <li><a href="#productos">Catalizador MEK</a></li>
+        <li><a href="#productos">Fibras de vidrio</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#nosotros">Quiénes somos</a></li>
+        <li><a href="#aplicaciones">Aplicaciones</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=541171144557" target="_blank">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 BARCOPLAST — Todos los derechos reservados</p>
+    <p style="color:var(--text-dim)">Diseñado para vender más 🚀</p>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Vi%20la%20web%20de%20BARCOPLAST%20y%20quiero%20consultar." class="float-wa" target="_blank" title="Escribir por WhatsApp">
+  <div class="float-wa-tooltip">¡Chateá con nosotros!</div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
