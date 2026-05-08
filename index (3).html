@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BARCOPLAST — Resinas Poliéster y Epoxi · 40 años · Envíos a todo el país</title>
+  <meta name="description" content="40 años fabricando y distribuyendo resinas poliéster, epoxi, fibras y catalizadores para náutica, construcción e industria. Asesoramiento técnico gratuito. Envíos a toda Argentina." />
+  <meta name="theme-color" content="#0f1e2e" />
+
+  <meta property="og:title" content="BARCOPLAST — Resinas Poliéster y Epoxi" />
+  <meta property="og:description" content="40 años de experiencia. Envíos a todo el país. Asesoramiento técnico gratuito." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.barcoplast.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=Manrope:wght@300;400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f1ebde;
+      --bg-2: #e8e0cf;
+      --ink: #0f1e2e;
+      --ink-soft: #1c2f44;
+      --ink-mute: #4a5b6f;
+      --accent: #c8421e;
+      --accent-soft: #e35a32;
+      --amber: #d9a441;
+      --rule: rgba(15, 30, 46, 0.14);
+      --rule-soft: rgba(15, 30, 46, 0.08);
+      --max: 1240px;
+      --gutter: clamp(20px, 4vw, 56px);
+      --sans: "Manrope", system-ui, sans-serif;
+      --display: "Big Shoulders Display", "Manrope", sans-serif;
+      --serif: "Fraunces", Georgia, serif;
+    }
+
+
+    /* ====== IMAGES ====== */
+    .brand-logo { height: 38px; width: auto; display: block; }
+    .hero-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(15,30,46,0.04) 1px, transparent 1px);
+      background-size: 3px 3px;
+      mix-blend-mode: multiply;
+      z-index: 1; opacity: 0.6;
+    }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); position: relative; z-index: 2; }
+
+    /* ========= TOPBAR ========= */
+    .topbar {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(241, 235, 222, 0.85);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--rule-soft);
+    }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 16px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: 0.02em; color: var(--ink); }
+    .brand-mark {
+      width: 42px; height: 42px;
+      background: var(--accent); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--bg); font-family: var(--display); font-weight: 900; font-size: 20px;
+      box-shadow: inset 0 -3px 0 rgba(0,0,0,0.12);
+    }
+    .brand .est { font-family: var(--sans); font-size: 11px; font-weight: 600; color: var(--ink-mute); letter-spacing: 0.18em; text-transform: uppercase; padding-left: 12px; border-left: 1px solid var(--rule); margin-left: 4px; }
+    .nav { display: flex; gap: 28px; align-items: center; }
+    .nav a { font-size: 14px; font-weight: 500; color: var(--ink-soft); transition: color 0.2s; position: relative; }
+    .nav a:hover { color: var(--accent); }
+    .nav a::after { content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: var(--accent); transition: width 0.25s ease; }
+    .nav a:hover::after { width: 100%; }
+    .cta-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--ink); color: var(--bg);
+      padding: 10px 18px; border-radius: 999px;
+      font-size: 13px; font-weight: 600;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .cta-pill:hover { background: var(--accent); transform: translateY(-1px); }
+    .cta-pill svg { width: 16px; height: 16px; }
+    @media (max-width: 880px) { .nav { display: none; } .topbar .label-long { display: none; } .brand .est { display: none; } }
+
+    /* ========= HERO ========= */
+    .hero { position: relative; padding: clamp(60px, 9vw, 110px) 0 clamp(40px, 6vw, 80px); }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(30px, 6vw, 80px); align-items: center; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+    .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(54px, 9vw, 124px); line-height: 0.92; letter-spacing: -0.015em; margin: 0 0 28px; color: var(--ink); }
+    .hero h1 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--accent); font-size: 0.92em; }
+    .hero p.lead { font-size: clamp(16px, 1.4vw, 19px); color: var(--ink-soft); max-width: 520px; margin: 0 0 36px; line-height: 1.6; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; border-radius: 4px; font-size: 14px; font-weight: 600; letter-spacing: 0.04em; transition: transform 0.2s, background 0.2s, color 0.2s; border: 1.5px solid transparent; }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--ink); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .btn-ghost:hover { background: var(--ink); color: var(--bg); }
+    .btn-meli { background: #fff159; color: #2d3277; border-color: #fff159; }
+    .btn-meli:hover { background: #ffe600; border-color: #ffe600; transform: translateY(-2px); color: #2d3277; }
+    .btn svg { width: 16px; height: 16px; }
+
+    .hero-visual { position: relative; aspect-ratio: 4/5; border-radius: 8px; overflow: hidden; }
+    .hero-visual svg { width: 100%; height: 100%; display: block; }
+    .hero-stamp {
+      position: absolute; top: 24px; left: 24px;
+      background: var(--bg); color: var(--ink);
+      font-family: var(--display); font-weight: 800;
+      padding: 14px 18px; border-radius: 4px;
+      box-shadow: 0 10px 30px rgba(15,30,46,0.18);
+      display: flex; flex-direction: column; line-height: 1;
+      z-index: 3;
+    }
+    .hero-stamp .big { font-size: 38px; color: var(--accent); margin-bottom: 4px; }
+    .hero-stamp .sub { font-family: var(--sans); font-weight: 600; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); }
+    .vertical-label { position: absolute; left: -10px; top: 50%; transform: translateY(-50%) rotate(-90deg); transform-origin: left center; font-size: 11px; font-weight: 600; letter-spacing: 0.32em; text-transform: uppercase; color: var(--ink-mute); white-space: nowrap; }
+    @media (max-width: 880px) { .hero-grid { grid-template-columns: 1fr; } .hero-visual { max-width: 460px; margin: 0 auto; } .vertical-label { display: none; } }
+
+    /* ========= STATS ========= */
+    .stats { background: var(--ink); color: var(--bg); padding: 56px 0; margin-top: 24px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .stat { padding: 0 16px; border-left: 1px solid rgba(241,235,222,0.16); }
+    .stat:first-child { border-left: 0; }
+    .stat-num { font-family: var(--display); font-weight: 900; font-size: clamp(48px, 7vw, 76px); line-height: 1; color: var(--amber); letter-spacing: -0.01em; }
+    .stat-label { font-size: 12px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(241,235,222,0.7); margin-top: 12px; }
+    @media (max-width: 720px) { .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 32px 16px; } .stat:nth-child(3) { border-left: 0; } }
+
+    /* ========= SECTIONS ========= */
+    section { padding: clamp(70px, 9vw, 130px) 0; position: relative; }
+    .section-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; gap: 30px; flex-wrap: wrap; }
+    .section-num { font-family: var(--display); font-weight: 700; font-size: 14px; letter-spacing: 0.2em; color: var(--accent); }
+    .section-title { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 6vw, 72px); line-height: 0.96; letter-spacing: -0.01em; margin: 8px 0 0; max-width: 16ch; }
+    .section-title em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--accent); }
+    .section-intro { font-size: 17px; color: var(--ink-soft); max-width: 460px; line-height: 1.6; }
+
+    /* ========= PRODUCTOS ========= */
+    .cat-label { display: inline-block; font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); padding: 8px 14px; background: var(--bg-2); border-radius: 999px; margin: 60px 0 28px; }
+    .cat-label:first-of-type { margin-top: 0; }
+    .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card { background: #fff; border: 1px solid var(--rule-soft); border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(15,30,46,0.25); border-color: var(--rule); }
+    .card-illustration {
+      aspect-ratio: 4/3; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .card-illustration svg { width: 100%; height: 100%; display: block; }
+    .card-tag { position: absolute; top: 14px; left: 14px; background: rgba(15,30,46,0.85); backdrop-filter: blur(8px); color: var(--bg); font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 10px; border-radius: 3px; z-index: 3; }
+    .card-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+    .card-title { font-family: var(--display); font-weight: 800; font-size: 24px; line-height: 1.05; margin: 0 0 10px; color: var(--ink); }
+    .card-desc { font-size: 14px; color: var(--ink-mute); line-height: 1.55; margin: 0 0 18px; flex: 1; }
+    .card-pres { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .pres { font-size: 11px; font-weight: 600; padding: 4px 10px; background: var(--bg); border: 1px solid var(--rule-soft); border-radius: 999px; color: var(--ink-soft); }
+    .card-cta { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--accent); }
+    .card-cta svg { width: 14px; height: 14px; transition: transform 0.2s; }
+    .card-cta:hover svg { transform: translateX(4px); }
+    @media (max-width: 960px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
+
+    /* ========= APPS ========= */
+    .apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+    .app { background: var(--bg); padding: 40px 32px; transition: background 0.3s; }
+    .app:hover { background: var(--ink); color: var(--bg); }
+    .app:hover .app-icon { background: var(--accent); color: #fff; }
+    .app:hover .app-desc { color: rgba(241,235,222,0.7); }
+    .app-icon { width: 56px; height: 56px; background: var(--ink); color: var(--amber); border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 22px; transition: background 0.3s, color 0.3s; }
+    .app-icon svg { width: 28px; height: 28px; }
+    .app-title { font-family: var(--display); font-weight: 800; font-size: 26px; line-height: 1; margin: 0 0 10px; }
+    .app-desc { font-size: 14px; line-height: 1.55; color: var(--ink-mute); transition: color 0.3s; margin: 0; }
+    @media (max-width: 880px) { .apps-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 540px) { .apps-grid { grid-template-columns: 1fr; } }
+
+    /* ========= WHY ========= */
+    .why { background: var(--ink); color: var(--bg); }
+    .why .section-title { color: var(--bg); }
+    .why .section-title em { color: var(--amber); }
+    .why .section-num { color: var(--amber); }
+    .why .section-intro { color: rgba(241,235,222,0.75); }
+    .why-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(241,235,222,0.14); border: 1px solid rgba(241,235,222,0.14); }
+    .why-item { background: var(--ink); padding: 36px; display: flex; gap: 22px; align-items: flex-start; }
+    .why-num { font-family: var(--display); font-weight: 800; font-size: 28px; color: var(--accent-soft); flex-shrink: 0; }
+    .why-content h3 { font-family: var(--display); font-weight: 800; font-size: 22px; margin: 0 0 8px; color: var(--bg); }
+    .why-content p { font-size: 14px; line-height: 1.6; color: rgba(241,235,222,0.7); margin: 0; }
+    @media (max-width: 720px) { .why-grid { grid-template-columns: 1fr; } }
+
+    /* ========= TESTIMONIOS ========= */
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi { background: var(--bg); border: 1px solid var(--rule); border-radius: 8px; padding: 32px; }
+    .testi-stars { color: var(--amber); font-size: 16px; letter-spacing: 4px; margin-bottom: 18px; }
+    .testi-quote { font-family: var(--serif); font-size: 18px; line-height: 1.5; color: var(--ink-soft); margin: 0 0 24px; font-style: italic; }
+    .testi-author { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--rule-soft); }
+    .testi-avatar { width: 44px; height: 44px; background: var(--ink); color: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 800; font-size: 14px; }
+    .testi-name { font-weight: 700; font-size: 14px; color: var(--ink); }
+    .testi-role { font-size: 12px; color: var(--ink-mute); margin-top: 2px; }
+    @media (max-width: 880px) { .testi-grid { grid-template-columns: 1fr; } }
+
+    /* ========= UBICACIÓN ========= */
+    .ubic-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 0; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; background: #fff; }
+    .ubic-info { padding: clamp(28px, 4vw, 50px); }
+    .ubic-info h3 { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 3.5vw, 40px); line-height: 1; margin: 0 0 24px; }
+    .ubic-detail { display: flex; gap: 14px; align-items: flex-start; padding: 18px 0; border-top: 1px solid var(--rule-soft); }
+    .ubic-detail:first-of-type { border-top: 0; }
+    .ubic-icon { flex-shrink: 0; width: 36px; height: 36px; background: var(--bg); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: var(--accent); }
+    .ubic-icon svg { width: 18px; height: 18px; }
+    .ubic-text-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 4px; }
+    .ubic-text-value { font-size: 16px; color: var(--ink); font-weight: 500; }
+    .ubic-actions { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .ubic-map { background: var(--bg-2); min-height: 380px; }
+    .ubic-map iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.2) contrast(1.05); }
+    @media (max-width: 820px) { .ubic-grid { grid-template-columns: 1fr; } .ubic-map { min-height: 300px; } }
+
+    /* ========= CTA FINAL ========= */
+    .cta-final { background: var(--accent); color: #fff; text-align: center; padding: clamp(70px, 10vw, 130px) 0; position: relative; overflow: hidden; }
+    .cta-final::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.08) 1.5px, transparent 1.5px); background-size: 24px 24px; opacity: 0.6; }
+    .cta-final h2 { font-family: var(--display); font-weight: 800; font-size: clamp(44px, 7vw, 88px); line-height: 0.95; letter-spacing: -0.01em; margin: 0 0 22px; position: relative; }
+    .cta-final h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--ink); }
+    .cta-final p { font-size: 18px; max-width: 560px; margin: 0 auto 36px; opacity: 0.95; position: relative; }
+    .cta-final .btns { display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; position: relative; }
+    .cta-final .btn-white { background: #fff; color: var(--accent); }
+    .cta-final .btn-white:hover { background: var(--ink); color: #fff; }
+    .cta-final .btn-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); }
+    .cta-final .btn-outline:hover { background: #fff; color: var(--accent); border-color: #fff; }
+
+    /* ========= FOOTER ========= */
+    footer { background: var(--ink); color: rgba(241,235,222,0.7); padding: 70px 0 30px; }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 50px; border-bottom: 1px solid rgba(241,235,222,0.14); }
+    .footer-brand .brand { color: var(--bg); }
+    .footer-brand p { font-size: 14px; line-height: 1.6; max-width: 320px; margin: 22px 0; }
+    .footer-social { display: flex; gap: 10px; }
+    .footer-social a { width: 38px; height: 38px; border: 1px solid rgba(241,235,222,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+    .footer-social a:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .footer-social svg { width: 16px; height: 16px; }
+    .footer-col h4 { font-family: var(--display); font-weight: 700; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bg); margin: 0 0 18px; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col li { margin-bottom: 10px; }
+    .footer-col a { font-size: 14px; transition: color 0.2s; }
+    .footer-col a:hover { color: var(--amber); }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 28px; flex-wrap: wrap; gap: 16px; font-size: 12px; color: rgba(241,235,222,0.5); }
+    @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    /* ========= WHATSAPP FLOAT ========= */
+    .wa-float { position: fixed; bottom: 22px; right: 22px; z-index: 100; background: #25d366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4); transition: transform 0.2s; }
+    .wa-float:hover { transform: scale(1.08) translateY(-2px); }
+    .wa-float svg { width: 30px; height: 30px; }
+    .wa-float::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #25d366; animation: pulse 2s ease-out infinite; }
+    @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.3); } }
+
+    /* ========= REVEAL ========= */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } .reveal { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body>
+
+  <!-- ========= TOPBAR ========= -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#" class="brand">
+        <img src="logo.png" alt="BARCOPLAST" class="brand-logo" />
+        <span>BARCOPLAST</span>
+        <span class="est">Est. 1989</span>
+      </a>
+      <nav class="nav">
+        <a href="#productos">Productos</a>
+        <a href="#aplicaciones">Aplicaciones</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a class="cta-pill" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Vi%20la%20web%20de%20BARCOPLAST%20y%20quiero%20consultar." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 0C5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+        <span class="label-long">Consultar ahora</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========= HERO ========= -->
+  <section class="hero">
+    <div class="vertical-label">EST. 1989 · BARCOPLAST · TIGRE</div>
+    <div class="wrap hero-grid">
+      <div class="reveal">
+        <div class="eyebrow">40 años de experiencia</div>
+        <h1>Resinas <em>Poliéster</em> y Epoxi</h1>
+        <p class="lead">Materiales de alta calidad para náutica, construcción e industria. Asesoramiento técnico personalizado y envíos a todo el país.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20cotizar%20resinas." target="_blank" rel="noopener">
+            Cotizar por WhatsApp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn-meli" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18l-2 12H5L3 6zm2.4 2l1.4 8h10.4l1.4-8H5.4zM9 19a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+            Mercado Libre
+          </a>
+          <a class="btn btn-ghost" href="#productos">Ver productos</a>
+        </div>
+      </div>
+      <!-- Hero illustration: nautical/industrial -->
+      <div class="hero-visual reveal">
+        <img src="resina-nautica.jpg" alt="Resinas BARCOPLAST" class="hero-img" />
+        <div class="hero-stamp">
+          <span class="big">40</span>
+          <span class="sub">Años · 1989</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= STATS ========= -->
+  <section class="stats" style="padding: 56px 0;">
+    <div class="wrap">
+      <div class="stats-grid">
+        <div class="stat"><div class="stat-num">40</div><div class="stat-label">Años de experiencia</div></div>
+        <div class="stat"><div class="stat-num">23</div><div class="stat-label">Provincias con envíos</div></div>
+        <div class="stat"><div class="stat-num">+200</div><div class="stat-label">Clientes activos</div></div>
+        <div class="stat"><div class="stat-num">24h</div><div class="stat-label">Respuesta técnica</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= PRODUCTOS ========= -->
+  <section id="productos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-num">01 — CATÁLOGO</div>
+          <h2 class="section-title">Nuestros <em>productos</em></h2>
+        </div>
+        <p class="section-intro">Resinas, catalizadores, fibras y accesorios para cada proyecto industrial y artesanal. Stock permanente y envíos inmediatos.</p>
+      </div>
+
+      <span class="cat-label">Resinas</span>
+      <div class="product-grid">
+
+        <!-- Resina Náutica -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Resina</span>
+            <img src="resina-nautica.jpg" alt="Resina Náutica Común" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Resina Náutica Común</h3>
+            <p class="card-desc">Preacelerada, ideal para trabajos en fibra de vidrio náuticos e industriales. Alto rendimiento.</p>
+            <div class="card-pres"><span class="pres">1 kg</span><span class="pres">5 kg</span><span class="pres">20 kg</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20N%C3%A1utica%20Com%C3%BAn." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Resina Epoxi -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Resina</span>
+            <img src="resina-epoxi.jpg" alt="Resina Epoxi" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Resina Epoxi</h3>
+            <p class="card-desc">Sistema bicomponente Parte A + Parte B. Excelente adherencia y resistencia química.</p>
+            <div class="card-pres"><span class="pres">1L (A) + 500g (B)</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Epoxi." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Resina Cristal -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Resina</span>
+            <img src="resina-epoxi.jpg" alt="Resina Cristal" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Resina Cristal</h3>
+            <p class="card-desc">Alta transparencia. Ideal para encapsulados, bijouterie, decoración y arte resinado.</p>
+            <div class="card-pres"><span class="pres">1 kg</span><span class="pres">5 kg</span><span class="pres">20 kg</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Cristal." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Resina Flex -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Resina</span>
+            <img src="resina-epoxi.jpg" alt="Resina Flex" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Resina Flex</h3>
+            <p class="card-desc">Alta flexibilidad una vez curada. Para piezas que requieren resistencia a impactos y vibración.</p>
+            <div class="card-pres"><span class="pres">1 kg</span><span class="pres">5 kg</span><span class="pres">20 kg</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Flex." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Catalizador MEK -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Catalizador</span>
+            <img src="catalizador.jpg" alt="Catalizador MEK" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Catalizador MEK</h3>
+            <p class="card-desc">Peróxido de metil etil cetona. Iniciador de curado para resinas poliéster. Alta pureza.</p>
+            <div class="card-pres"><span class="pres">30ml</span><span class="pres">50ml</span><span class="pres">100ml</span><span class="pres">1L</span><span class="pres">5L</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Catalizador%20MEK." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Acelerador de Cobalto -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Acelerador</span>
+            <img src="acelerador.jpg" alt="Acelerador de Cobalto 2%" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Acelerador de Cobalto 2%</h3>
+            <p class="card-desc">Reduce el tiempo de gelificación. Formulado al 2% para mayor control en el proceso de curado.</p>
+            <div class="card-pres"><span class="pres">30ml</span><span class="pres">50ml</span><span class="pres">100ml</span><span class="pres">1L</span><span class="pres">5L</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Acelerador%20de%20Cobalto." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+
+      <span class="cat-label">Fibras</span>
+      <div class="product-grid">
+
+        <!-- Tela de fibra -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Fibra</span>
+            <img src="tela-fibra.jpg" alt="Tela de fibra de vidrio" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Tela de fibra de vidrio</h3>
+            <p class="card-desc">Disponible por metro o rollo. Refuerzo estructural liviano para todo tipo de laminados.</p>
+            <div class="card-pres"><span class="pres">Por metro</span><span class="pres">Por rollo</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Tela%20de%20fibra." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Fibra 300/450 -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Fibra</span>
+            <img src="fibra-mat.jpg" alt="Fibra de vidrio 300/450" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Fibra de vidrio 300/450</h3>
+            <p class="card-desc">Mat de fibra cortada. Gramajes 300 y 450 g/m² para laminados estándar e industriales.</p>
+            <div class="card-pres"><span class="pres">300 g/m²</span><span class="pres">450 g/m²</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Fibra%20de%20vidrio%20300/450." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Corematt -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Fibra</span>
+            <img src="corematt.jpg" alt="Corematt" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Corematt</h3>
+            <p class="card-desc">Material de núcleo para sándwich estructural. Reduce peso y aumenta la rigidez de la pieza.</p>
+            <div class="card-pres"><span class="pres">Por metro</span><span class="pres">Por rollo</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Corematt." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+
+      <span class="cat-label">Accesorios y herramientas</span>
+      <div class="product-grid">
+
+        <!-- Rodillo -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Accesorio</span>
+            <img src="rodillo.jpg" alt="Rodillo laminador" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Rodillo laminador</h3>
+            <p class="card-desc">Para aplicación y desgasificación de laminados. Elimina burbujas en fibra y resina.</p>
+            <div class="card-pres"><span class="pres">Varios tamaños</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20rodillo." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Limpiador -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Producto</span>
+            <img src="catalizador.jpg" alt="Limpiador de resina" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Limpiador de resina</h3>
+            <p class="card-desc">Solvente especializado para limpieza de herramientas y superficies con resina sin curar.</p>
+            <div class="card-pres"><span class="pres">Varios formatos</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20limpiador%20de%20resina." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+
+        <!-- Diluyente -->
+        <article class="card reveal">
+          <div class="card-illustration">
+            <span class="card-tag">Producto</span>
+            <img src="catalizador.jpg" alt="Diluyente" class="card-img" />
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Diluyente</h3>
+            <p class="card-desc">Para ajustar la viscosidad de resinas poliéster. Control preciso de la consistencia del material.</p>
+            <div class="card-pres"><span class="pres">Varios formatos</span></div>
+            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20diluyente." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= APLICACIONES ========= -->
+  <section id="aplicaciones" style="background: var(--bg-2);">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-num">02 — APLICACIONES</div>
+          <h2 class="section-title">¿Para qué <em>se usa?</em></h2>
+        </div>
+        <p class="section-intro">Nuestros materiales están presentes en los rubros más exigentes de Argentina, desde astilleros hasta talleres de arte resinado.</p>
+      </div>
+
+      <div class="apps-grid reveal">
+        <div class="app">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6M12 8c-3 0-5 2-5 5v6h10v-6c0-3-2-5-5-5zM5 19h14"/></svg></div>
+          <h3 class="app-title">Náutica</h3>
+          <p class="app-desc">Construcción y reparación de cascos, cubiertas y piezas para embarcaciones.</p>
+        </div>
+        <div class="app">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></div>
+          <h3 class="app-title">Construcción</h3>
+          <p class="app-desc">Impermeabilizaciones, refuerzos estructurales, revestimientos industriales.</p>
+        </div>
+        <div class="app">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M5 17H3v-4l3-5h7l3 5h2v4h-1M10 8V5h4v3"/></svg></div>
+          <h3 class="app-title">Automotriz</h3>
+          <p class="app-desc">Carrocerías, aerodinámica, reparación de piezas en fibra de vidrio.</p>
+        </div>
+        <div class="app">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 22a9 9 0 0 1 0-18c5 0 9 4 9 9 0 2-1 3-3 3h-2c-1 0-2 1-2 2 0 1 1 2 1 3 0 1-1 1-3 1z"/></svg></div>
+          <h3 class="app-title">Arte y Diseño</h3>
+          <p class="app-desc">Encapsulados, bijouterie, mesas resinadas, esculturas y arte decorativo.</p>
+        </div>
+        <div class="app">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3 class="app-title">Industria</h3>
+          <p class="app-desc">Tanques, recipientes, tuberías y piezas de alta resistencia química.</p>
+        </div>
+        <div class="app">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4l-7 7 2 2 7-7a4 4 0 0 0 5.4-5.4L14 9l-2-2 2.7-2.7z"/></svg></div>
+          <h3 class="app-title">Reparaciones</h3>
+          <p class="app-desc">Parches, sellados y refuerzos en fibra de vidrio para cualquier estructura.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= POR QUÉ ========= -->
+  <section id="nosotros" class="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-num">03 — NOSOTROS</div>
+          <h2 class="section-title">40 años de <em>respaldo</em></h2>
+        </div>
+        <p class="section-intro">Cuatro décadas abasteciendo a la industria náutica, construcción y manufactura de Argentina con materiales de alta calidad.</p>
+      </div>
+
+      <div class="why-grid reveal">
+        <div class="why-item"><div class="why-num">01</div><div class="why-content"><h3>Envíos a todo el país</h3><p>Despachamos a las 23 provincias. Embalaje seguro y especializado para materiales químicos.</p></div></div>
+        <div class="why-item"><div class="why-num">02</div><div class="why-content"><h3>Asesoramiento técnico gratuito</h3><p>Te orientamos en qué producto usar según tu aplicación, presupuesto y nivel de experiencia.</p></div></div>
+        <div class="why-item"><div class="why-num">03</div><div class="why-content"><h3>Stock permanente</h3><p>No trabajamos bajo pedido. Tenemos stock disponible para envío inmediato en todos los productos.</p></div></div>
+        <div class="why-item"><div class="why-num">04</div><div class="why-content"><h3>Atención directa</h3><p>Hablás directamente con los especialistas. Sin formularios ni intermediarios ni burocracia.</p></div></div>
+        <div class="why-item"><div class="why-num">05</div><div class="why-content"><h3>Clientes de toda la vida</h3><p>Muchos de nuestros clientes llevan más de 20 años trabajando con BARCOPLAST.</p></div></div>
+        <div class="why-item"><div class="why-num">06</div><div class="why-content"><h3>Calidad asegurada</h3><p>Trabajamos solo con marcas y proveedores que garantizan la mejor performance del material.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= TESTIMONIOS ========= -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-num">04 — CLIENTES</div>
+          <h2 class="section-title">Lo que <em>dicen</em> de nosotros</h2>
+        </div>
+        <p class="section-intro">Reseñas reales de clientes que llevan años trabajando con BARCOPLAST en todo el país.</p>
+      </div>
+
+      <div class="testi-grid">
+        <div class="testi reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Llevo más de 10 años comprando en BARCOPLAST. La resina náutica es de primera calidad y siempre me asesoraron perfectamente para cada trabajo en mi taller."</p>
+          <div class="testi-author"><div class="testi-avatar">MR</div><div><div class="testi-name">Marcelo R.</div><div class="testi-role">Astillero — Buenos Aires</div></div></div>
+        </div>
+        <div class="testi reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Me enviaron todo a Córdoba en tiempo y forma. La resina cristal llegó perfecta y el asesoramiento antes de comprar fue clave para mi proyecto de arte resinado."</p>
+          <div class="testi-author"><div class="testi-avatar">LA</div><div><div class="testi-name">Laura A.</div><div class="testi-role">Artista — Córdoba</div></div></div>
+        </div>
+        <div class="testi reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Excelente calidad de productos y muy buena atención. Recomendables al 100% para trabajo industrial. Los precios son muy competitivos."</p>
+          <div class="testi-author"><div class="testi-avatar">JG</div><div><div class="testi-name">José G.</div><div class="testi-role">Industria — Rosario</div></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= UBICACIÓN ========= -->
+  <section style="background: var(--bg-2);">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-num">05 — UBICACIÓN</div>
+          <h2 class="section-title">Visitanos en <em>Tigre</em></h2>
+        </div>
+        <p class="section-intro">Estamos en Av. Italia 1219, Tigre. Acercate al local o coordiná tu envío a cualquier punto del país.</p>
+      </div>
+
+      <div class="ubic-grid reveal">
+        <div class="ubic-info">
+          <h3>Av. Italia 1219<br/>Tigre, Buenos Aires</h3>
+
+          <div class="ubic-detail">
+            <div class="ubic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <div><div class="ubic-text-label">Horario</div><div class="ubic-text-value">Lun a Vie · 9 a 16 hs</div></div>
+          </div>
+
+          <div class="ubic-detail">
+            <div class="ubic-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg></div>
+            <div><div class="ubic-text-label">WhatsApp</div><div class="ubic-text-value">+54 11 7114-4557</div></div>
+          </div>
+
+          <div class="ubic-detail">
+            <div class="ubic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 6l8 7 8-7"/></svg></div>
+            <div><div class="ubic-text-label">Email</div><div class="ubic-text-value">barcoplast@gmail.com</div></div>
+          </div>
+
+          <div class="ubic-detail">
+            <div class="ubic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+            <div><div class="ubic-text-label">Envíos</div><div class="ubic-text-value">A toda Argentina · Origen Tigre (CP 1648)</div></div>
+          </div>
+
+          <div class="ubic-actions">
+            <a class="btn btn-primary" href="https://maps.google.com/?q=Avenida+Italia+1219,+Tigre,+Buenos+Aires,+Argentina" target="_blank" rel="noopener">Abrir en Google Maps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a class="btn btn-ghost" href="https://viacargo.com.ar/cotizar-envio/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 17h6V8h-3l-3-4H4v13h2"/><circle cx="8" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg> Cotizar envío (Vía Cargo)</a>
+            <a class="btn btn-ghost" href="https://g.page/r/CTxYUjwMU17xEBM/review" target="_blank" rel="noopener">Dejanos una reseña ⭐</a>
+          </div>
+        </div>
+        <div class="ubic-map">
+          <iframe loading="lazy" src="https://maps.google.com/maps?q=Avenida+Italia+1219,+Tigre,+Buenos+Aires,+Argentina&output=embed&z=16" title="Mapa BARCOPLAST"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= CTA FINAL ========= -->
+  <section id="contacto" class="cta-final">
+    <div class="wrap">
+      <h2>¿Listo para cotizar <em>tu proyecto?</em></h2>
+      <p>Respondemos en minutos. Asesoramiento técnico gratuito para ayudarte a elegir el material correcto.</p>
+      <div class="btns">
+        <a class="btn btn-white" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20sobre%20sus%20resinas%20y%20precios." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 0C5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg> Escribir por WhatsApp</a>
+        <a class="btn btn-meli" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18l-2 12H5L3 6zm2.4 2l1.4 8h10.4l1.4-8H5.4zM9 19a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg> Comprar en Mercado Libre</a>
+        <a class="btn btn-outline" href="mailto:barcoplast@gmail.com">Enviar email</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= FOOTER ========= -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <img src="logo.png" alt="BARCOPLAST" class="brand-logo" style="filter: brightness(1.5);" />
+            <span style="color: var(--bg);">BARCOPLAST</span>
+          </div>
+          <p>Más de 40 años abasteciendo a la industria náutica, construcción y manufactura de Argentina con materiales de alta calidad.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/barcoplast" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4zM17.5 6.5h.01"/></svg></a>
+            <a href="https://www.facebook.com/barcoplast" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5H15c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+            <a href="https://api.whatsapp.com/send?phone=541171144557" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 0C5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Productos</h4>
+          <ul>
+            <li><a href="#productos">Resina Náutica</a></li>
+            <li><a href="#productos">Resina Epoxi</a></li>
+            <li><a href="#productos">Resina Cristal</a></li>
+            <li><a href="#productos">Resina Flex</a></li>
+            <li><a href="#productos">Catalizador MEK</a></li>
+            <li><a href="#productos">Fibras de vidrio</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#nosotros">Quiénes somos</a></li>
+            <li><a href="#aplicaciones">Aplicaciones</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Mercado Libre</a></li>
+            <li><a href="https://viacargo.com.ar/cotizar-envio/" target="_blank" rel="noopener">Cotizar envío</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li>Av. Italia 1219, Tigre</li>
+            <li>Lun a Vie 9 a 16 hs</li>
+            <li><a href="mailto:barcoplast@gmail.com">barcoplast@gmail.com</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=541171144557" target="_blank" rel="noopener">+54 11 7114-4557</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> BARCOPLAST — Todos los derechos reservados</div>
+        <div>Resinas Poliéster y Epoxi · Tigre, Argentina 🇦🇷</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating -->
+  <a class="wa-float" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Vi%20la%20web%20de%20BARCOPLAST%20y%20quiero%20consultar." target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 0C5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
+  </a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('in'); observer.unobserve(entry.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
