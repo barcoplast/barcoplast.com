@@ -3,14 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BARCOPLAST — Resinas Poliéster y Epoxi · 40 años · Envíos a todo el país</title>
-  <meta name="description" content="40 años fabricando y distribuyendo resinas poliéster, epoxi, fibras y catalizadores para náutica, construcción e industria. Asesoramiento técnico gratuito. Envíos a toda Argentina." />
+  <title>Resina Epoxi y Poliéster, Fibra de Vidrio | BARCOPLAST Tigre</title>
+  <meta name="description" content="Resina epoxi y poliéster, fibra de vidrio, catalizadores y accesorios para pisos, mesas, arte con resina, laminados y náutica. Local en Tigre, envíos a todo el país y asesoramiento por WhatsApp." />
   <meta name="theme-color" content="#0f1e2e" />
+  <link rel="canonical" href="https://www.barcoplast.com/" />
 
-  <meta property="og:title" content="BARCOPLAST — Resinas Poliéster y Epoxi" />
-  <meta property="og:description" content="40 años de experiencia. Envíos a todo el país. Asesoramiento técnico gratuito." />
+  <meta property="og:title" content="BARCOPLAST · Resina epoxi, poliéster y fibra de vidrio" />
+  <meta property="og:description" content="Materiales para pisos, mesas, arte con resina, fibra de vidrio y náutica. Local en Tigre y envíos a todo el país." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.barcoplast.com" />
+  <meta property="og:url" content="https://www.barcoplast.com/" />
+  <meta property="og:image" content="https://www.barcoplast.com/resina-nautica.jpg" />
+  <meta property="og:locale" content="es_AR" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "BARCOPLAST",
+    "url": "https://www.barcoplast.com/",
+    "logo": "https://www.barcoplast.com/logo.png",
+    "image": "https://www.barcoplast.com/resina-nautica.jpg",
+    "email": "barcoplast@gmail.com",
+    "telephone": "+54 11 7114-4557",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Italia 1219",
+      "addressLocality": "Tigre",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "1648",
+      "addressCountry": "AR"
+    },
+    "openingHours": "Mo-Fr 09:00-16:00",
+    "sameAs": ["https://www.instagram.com/barcoplast", "https://www.facebook.com/barcoplast"]
+  }
+  </script>
+
+  <!-- MEDICIÓN: pegar acá el fragmento de Google Tag Manager (GTM-XXXXXXX) cuando esté creado.
+       La página ya envía al dataLayer los eventos "whatsapp_click" y "mercadolibre_click" (ver script al final). -->
+  <script>window.dataLayer = window.dataLayer || [];</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,7 +134,7 @@
     .hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(30px, 6vw, 80px); align-items: center; }
     .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
     .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
-    .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(54px, 9vw, 124px); line-height: 0.92; letter-spacing: -0.015em; margin: 0 0 28px; color: var(--ink); }
+    .hero h1 { font-family: var(--display); font-weight: 800; font-size: clamp(50px, 7.5vw, 104px); line-height: 0.92; letter-spacing: -0.015em; margin: 0 0 28px; color: var(--ink); }
     .hero h1 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--accent); font-size: 0.92em; }
     .hero p.lead { font-size: clamp(16px, 1.4vw, 19px); color: var(--ink-soft); max-width: 520px; margin: 0 0 36px; line-height: 1.6; }
     .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
@@ -263,6 +293,84 @@
     .wa-float::after { content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #25d366; animation: pulse 2s ease-out infinite; }
     @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.3); } }
 
+    /* ========= NECESIDADES ========= */
+    .needs-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    .need { background: #fff; border: 1px solid var(--rule-soft); border-radius: 8px; padding: 26px 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+    .need h3 { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1; margin: 0; }
+    .need .need-what { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
+    .need ul { margin: 0; padding-left: 18px; font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
+    .need .need-actions { margin-top: auto; display: flex; flex-direction: column; gap: 8px; padding-top: 8px; border-top: 1px solid var(--rule-soft); }
+    .need .need-actions a { font-size: 14px; font-weight: 600; color: var(--accent); }
+    .need .need-actions a:hover { color: var(--ink); }
+    @media (max-width: 1100px) { .needs-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 720px) { .needs-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .needs-grid { grid-template-columns: 1fr; } }
+
+    /* ========= EPOXI VS POLIÉSTER ========= */
+    .versus-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 8px; background: #fff; margin-top: 56px; }
+    .versus { border-collapse: collapse; width: 100%; min-width: 600px; font-size: 15px; }
+    .versus th, .versus td { padding: 16px 20px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule-soft); }
+    .versus thead th { font-family: var(--display); font-weight: 800; font-size: 24px; background: var(--ink); color: var(--bg); }
+    .versus tbody th { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-mute); width: 22%; }
+    .versus tr:last-child > * { border-bottom: 0; }
+    .versus-title { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 40px); line-height: 1; margin: 0 0 8px; }
+    .versus-note { font-size: 15px; color: var(--ink-mute); margin: 0; max-width: 640px; }
+
+    /* ========= FILTROS Y BOTONES DE PRODUCTO ========= */
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
+    .chip { font-family: var(--sans); font-size: 14px; font-weight: 600; padding: 10px 16px; border-radius: 999px; border: 1px solid var(--rule); background: transparent; color: var(--ink); cursor: pointer; }
+    .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+    .card-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .card-actions .btn { flex: 1 1 140px; justify-content: center; padding: 12px 14px; font-size: 13px; }
+    .btn-wa { background: #1f9d55; color: #fff; }
+    .btn-wa:hover { background: var(--ink); transform: translateY(-2px); }
+    .cat-block[hidden] { display: none; }
+    .card[hidden] { display: none; }
+    .more-products { margin-top: 48px; padding: 28px; border: 1px dashed var(--rule); border-radius: 8px; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; }
+    .more-products h3 { font-family: var(--display); font-weight: 800; font-size: 26px; margin: 0 0 6px; }
+    .more-products p { margin: 0; color: var(--ink-mute); font-size: 15px; }
+    .more-products .card-pres { margin: 12px 0 0; }
+    @media (max-width: 720px) { .more-products { grid-template-columns: 1fr; } }
+
+    /* ========= PISOS ========= */
+    .pisos { background: var(--bg-2); }
+    .pisos-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(30px, 5vw, 70px); align-items: start; }
+    .pisos-steps { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 14px; }
+    .pisos-steps li { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: center; font-size: 15px; color: var(--ink-soft); }
+    .pisos-steps b { width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: var(--amber); display: grid; place-items: center; font-family: var(--display); font-size: 16px; }
+    .floor-form { background: #fff; border: 1px solid var(--rule); border-radius: 8px; padding: clamp(20px, 3vw, 32px); display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .floor-form .full { grid-column: 1 / -1; }
+    .field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .field label { font-size: 13px; font-weight: 600; color: var(--ink); }
+    .field input, .field select { font: inherit; font-size: 16px; padding: 12px 14px; border: 1px solid var(--rule); border-radius: 4px; background: var(--bg); color: var(--ink); width: 100%; }
+    .field input:focus, .field select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+    .floor-form .btn { width: 100%; justify-content: center; }
+    .form-hint { font-size: 13px; color: var(--ink-mute); margin: 0; }
+    @media (max-width: 880px) { .pisos-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 480px) { .floor-form { grid-template-columns: 1fr; } }
+
+    /* ========= CÓMO COMPRAR ========= */
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .buy-step { border-top: 3px solid var(--accent); padding-top: 20px; }
+    .buy-step .k { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-mute); }
+    .buy-step h3 { font-family: var(--display); font-weight: 800; font-size: 28px; margin: 6px 0 8px; }
+    .buy-step p { margin: 0; font-size: 15px; color: var(--ink-soft); }
+    .faq { margin-top: 64px; display: grid; gap: 10px; max-width: 820px; }
+    .faq-title { font-family: var(--display); font-weight: 800; font-size: clamp(28px, 4vw, 40px); margin: 64px 0 20px; }
+    .faq details { background: #fff; border: 1px solid var(--rule-soft); border-radius: 8px; padding: 0 22px; }
+    .faq summary { cursor: pointer; padding: 18px 0; font-weight: 600; font-size: 16px; }
+    .faq details p { margin: 0; padding: 0 0 18px; color: var(--ink-mute); font-size: 15px; }
+    @media (max-width: 820px) { .steps-grid { grid-template-columns: 1fr; } }
+
+    /* ========= BARRA MÓVIL ========= */
+    .mobile-bar { display: none; }
+    @media (max-width: 720px) {
+      .mobile-bar { display: flex; gap: 8px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 100; padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px)); background: var(--bg); border-top: 1px solid var(--rule); }
+      .mobile-bar .btn { flex: 1; justify-content: center; padding: 14px 10px; }
+      .wa-float { display: none; }
+      footer { padding-bottom: 100px; }
+    }
+
     /* ========= REVEAL ========= */
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
     .reveal.in { opacity: 1; transform: translateY(0); }
@@ -280,12 +388,13 @@
         <span class="est">Est. 1989</span>
       </a>
       <nav class="nav">
+        <a href="#proyectos">¿Qué querés hacer?</a>
         <a href="#productos">Productos</a>
-        <a href="#aplicaciones">Aplicaciones</a>
-        <a href="#nosotros">Nosotros</a>
+        <a href="#pisos">Pisos epoxi</a>
+        <a href="#como-comprar">Cómo comprar</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <a class="cta-pill" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Vi%20la%20web%20de%20BARCOPLAST%20y%20quiero%20consultar." target="_blank" rel="noopener">
+      <a class="cta-pill" data-track="header" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Vi%20la%20web%20de%20BARCOPLAST%20y%20quiero%20consultar." target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 0C5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
         <span class="label-long">Consultar ahora</span>
       </a>
@@ -298,23 +407,23 @@
     <div class="wrap hero-grid">
       <div class="reveal">
         <div class="eyebrow">40 años de experiencia</div>
-        <h1>Resinas <em>Poliéster</em> y Epoxi</h1>
-        <p class="lead">Materiales de alta calidad para náutica, construcción e industria. Asesoramiento técnico personalizado y envíos a todo el país.</p>
+        <h1>Resina <em>epoxi</em> y poliéster para tu proyecto</h1>
+        <p class="lead">Materiales para pisos, mesas, arte con resina, piezas de fibra de vidrio y náutica. Te ayudamos a elegir el producto correcto para tu trabajo y te lo enviamos a todo el país desde Tigre.</p>
         <div class="hero-ctas">
-          <a class="btn btn-primary" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20cotizar%20resinas." target="_blank" rel="noopener">
-            Cotizar por WhatsApp
+          <a class="btn btn-primary" data-track="hero" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20asesoramiento%20para%20elegir%20una%20resina." target="_blank" rel="noopener">
+            Consultar por WhatsApp
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn-meli" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">
+          <a class="btn btn-meli" data-ml="hero" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18l-2 12H5L3 6zm2.4 2l1.4 8h10.4l1.4-8H5.4zM9 19a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
-            Mercado Libre
+            Comprar en Mercado Libre
           </a>
-          <a class="btn btn-ghost" href="#productos">Ver productos</a>
+          <a class="btn btn-ghost" href="#proyectos">Elegir por proyecto</a>
         </div>
       </div>
       <!-- Hero illustration: nautical/industrial -->
       <div class="hero-visual reveal">
-        <img src="resina-nautica.jpg" alt="Resinas BARCOPLAST" class="hero-img" />
+        <img src="resina-nautica.jpg" alt="Resina poliéster náutica BARCOPLAST en envase" class="hero-img" fetchpriority="high" />
         <div class="hero-stamp">
           <span class="big">40</span>
           <span class="sub">Años · 1989</span>
@@ -335,31 +444,114 @@
     </div>
   </section>
 
+  <!-- ========= PROYECTOS (POR NECESIDAD) ========= -->
+  <section id="proyectos">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-num">ELEGÍ POR PROYECTO</div>
+          <h2 class="section-title">¿Qué querés <em>hacer?</em></h2>
+        </div>
+        <p class="section-intro">Cada trabajo lleva un material distinto. Elegí tu proyecto y te mostramos qué productos sirven, o escribinos y te asesoramos sin cargo.</p>
+      </div>
+
+      <div class="needs-grid">
+        <article class="need">
+          <span class="need-what">Recubrimiento epoxi</span>
+          <h3>Pisos</h3>
+          <ul><li>Epoxi para pisos</li><li>Pigmentos para dar color</li></ul>
+          <div class="need-actions">
+            <a href="#pisos">Cotizar mi piso →</a>
+            <a data-track="proyecto-pisos" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20ver%20los%20colores%20disponibles%20para%20piso%20epoxi." target="_blank" rel="noopener">Ver colores →</a>
+          </div>
+        </article>
+        <article class="need">
+          <span class="need-what">Resina epoxi</span>
+          <h3>Mesas y muebles</h3>
+          <ul><li>Resina epoxi</li><li>Pigmentos</li></ul>
+          <div class="need-actions">
+            <a data-track="proyecto-mesas" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20hacer%20una%20mesa%2Fmueble%20con%20resina.%20Medidas%20y%20espesor%3A%20" target="_blank" rel="noopener">Contanos medidas y espesor →</a>
+          </div>
+        </article>
+        <article class="need">
+          <span class="need-what">Encapsulados y decoración</span>
+          <h3>Arte con resina</h3>
+          <ul><li>Resina Cristal</li><li>Pigmentos</li></ul>
+          <div class="need-actions">
+            <a href="#productos" data-filter="resinas">Ver resinas →</a>
+            <a data-track="proyecto-arte" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20empezar%20con%20arte%20en%20resina.%20%C2%BFQu%C3%A9%20necesito%3F" target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+        <article class="need">
+          <span class="need-what">Laminados y reparaciones</span>
+          <h3>Fibra de vidrio</h3>
+          <ul><li>Resina poliéster + Catalizador MEK</li><li>Mat 300/450 y tela</li><li>Rodillo laminador</li></ul>
+          <div class="need-actions">
+            <a href="#productos" data-filter="fibras">Ver fibras →</a>
+            <a data-track="proyecto-fibra" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Necesito%20materiales%20para%20un%20trabajo%20en%20fibra%20de%20vidrio." target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+        <article class="need">
+          <span class="need-what">Cascos y cubiertas</span>
+          <h3>Náutica</h3>
+          <ul><li>Resina Náutica Común</li><li>Gelcoat</li><li>Fibras y Corematt</li></ul>
+          <div class="need-actions">
+            <a href="#productos" data-filter="resinas">Ver resinas →</a>
+            <a data-track="proyecto-nautica" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Necesito%20materiales%20para%20una%20embarcaci%C3%B3n." target="_blank" rel="noopener">Consultar →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="versus-wrap reveal">
+        <table class="versus">
+          <caption style="caption-side: top; text-align: left; padding: 22px 20px 18px;">
+            <p class="versus-title">Epoxi o poliéster: no son lo mismo</p>
+            <p class="versus-note">Curan distinto y no se mezclan sus instrucciones. Seguí siempre la ficha técnica del producto que compraste.</p>
+          </caption>
+          <thead><tr><th scope="col"><span style="font-size:0">Característica</span></th><th scope="col">Resina epoxi</th><th scope="col">Resina poliéster</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Cómo cura</th><td>Dos componentes: Parte A + Parte B, en la proporción indicada para cada producto.</td><td>Con Catalizador MEK. La Resina Náutica Común viene preacelerada.</td></tr>
+            <tr><th scope="row">Proyectos</th><td>Pisos, mesas, encapsulados y arte con resina.</td><td>Laminados con fibra de vidrio, náutica y reparaciones.</td></tr>
+            <tr><th scope="row">Para elegir</th><td colspan="2">Si no sabés cuál te conviene, mandanos una foto del trabajo por WhatsApp y te decimos qué usar.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
   <!-- ========= PRODUCTOS ========= -->
-  <section id="productos">
+  <section id="productos" style="padding-top: 0;">
     <div class="wrap">
       <div class="section-head reveal">
         <div>
           <div class="section-num">01 — CATÁLOGO</div>
           <h2 class="section-title">Nuestros <em>productos</em></h2>
         </div>
-        <p class="section-intro">Resinas, catalizadores, fibras y accesorios para cada proyecto industrial y artesanal. Stock permanente y envíos inmediatos.</p>
+        <p class="section-intro">Comprá en Mercado Libre con tu cuenta, o escribinos por WhatsApp y te pasamos precio y costo de envío.</p>
       </div>
 
-      <span class="cat-label">Resinas</span>
+      <div class="filters" role="group" aria-label="Filtrar productos">
+        <button type="button" class="chip" aria-pressed="true" data-chip="todos">Todos</button>
+        <button type="button" class="chip" aria-pressed="false" data-chip="resinas">Resinas y catalizadores</button>
+        <button type="button" class="chip" aria-pressed="false" data-chip="fibras">Fibras</button>
+        <button type="button" class="chip" aria-pressed="false" data-chip="accesorios">Accesorios</button>
+      </div>
+
+      <div class="cat-block" data-cat="resinas">
+      <span class="cat-label">Resinas y catalizadores</span>
       <div class="product-grid">
 
         <!-- Resina Náutica -->
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Resina</span>
-            <img src="resina-nautica.jpg" alt="Resina Náutica Común" class="card-img" />
+            <img src="resina-nautica.jpg" alt="Resina Náutica Común, resina poliéster preacelerada" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Resina Náutica Común</h3>
             <p class="card-desc">Preacelerada, ideal para trabajos en fibra de vidrio náuticos e industriales. Alto rendimiento.</p>
             <div class="card-pres"><span class="pres">1 kg</span><span class="pres">5 kg</span><span class="pres">20 kg</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20N%C3%A1utica%20Com%C3%BAn." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Resina Náutica Común" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Resina Náutica Común" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20N%C3%A1utica%20Com%C3%BAn." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -367,13 +559,13 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Resina</span>
-            <img src="resina-epoxi.jpg" alt="Resina Epoxi" class="card-img" />
+            <img src="resina-epoxi.jpg" alt="Resina Epoxi bicomponente Parte A y Parte B" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Resina Epoxi</h3>
             <p class="card-desc">Sistema bicomponente Parte A + Parte B. Excelente adherencia y resistencia química.</p>
             <div class="card-pres"><span class="pres">1L (A) + 500g (B)</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Epoxi." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Resina Epoxi" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Resina Epoxi" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Epoxi." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -381,13 +573,13 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Resina</span>
-            <img src="resina-epoxi.jpg" alt="Resina Cristal" class="card-img" />
+            <img src="resina-epoxi.jpg" alt="Resina Cristal de alta transparencia" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Resina Cristal</h3>
             <p class="card-desc">Alta transparencia. Ideal para encapsulados, bijouterie, decoración y arte resinado.</p>
             <div class="card-pres"><span class="pres">1 kg</span><span class="pres">5 kg</span><span class="pres">20 kg</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Cristal." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Resina Cristal" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Resina Cristal" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Cristal." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -395,13 +587,13 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Resina</span>
-            <img src="resina-epoxi.jpg" alt="Resina Flex" class="card-img" />
+            <img src="resina-epoxi.jpg" alt="Resina Flex" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Resina Flex</h3>
             <p class="card-desc">Alta flexibilidad una vez curada. Para piezas que requieren resistencia a impactos y vibración.</p>
             <div class="card-pres"><span class="pres">1 kg</span><span class="pres">5 kg</span><span class="pres">20 kg</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Flex." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Resina Flex" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Resina Flex" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Resina%20Flex." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -409,13 +601,13 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Catalizador</span>
-            <img src="catalizador.jpg" alt="Catalizador MEK" class="card-img" />
+            <img src="catalizador.jpg" alt="Catalizador MEK para resina poliéster" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Catalizador MEK</h3>
             <p class="card-desc">Peróxido de metil etil cetona. Iniciador de curado para resinas poliéster. Alta pureza.</p>
             <div class="card-pres"><span class="pres">30ml</span><span class="pres">50ml</span><span class="pres">100ml</span><span class="pres">1L</span><span class="pres">5L</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Catalizador%20MEK." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Catalizador MEK" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Catalizador MEK" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Catalizador%20MEK." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -423,17 +615,19 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Acelerador</span>
-            <img src="acelerador.jpg" alt="Acelerador de Cobalto 2%" class="card-img" />
+            <img src="acelerador.jpg" alt="Acelerador de Cobalto 2%" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Acelerador de Cobalto 2%</h3>
             <p class="card-desc">Reduce el tiempo de gelificación. Formulado al 2% para mayor control en el proceso de curado.</p>
             <div class="card-pres"><span class="pres">30ml</span><span class="pres">50ml</span><span class="pres">100ml</span><span class="pres">1L</span><span class="pres">5L</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Acelerador%20de%20Cobalto." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Acelerador de Cobalto 2%" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Acelerador de Cobalto 2%" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Acelerador%20de%20Cobalto." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
       </div>
+      </div>
 
+      <div class="cat-block" data-cat="fibras">
       <span class="cat-label">Fibras</span>
       <div class="product-grid">
 
@@ -441,13 +635,13 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Fibra</span>
-            <img src="tela-fibra.jpg" alt="Tela de fibra de vidrio" class="card-img" />
+            <img src="tela-fibra.jpg" alt="Tela de fibra de vidrio por metro o rollo" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Tela de fibra de vidrio</h3>
             <p class="card-desc">Disponible por metro o rollo. Refuerzo estructural liviano para todo tipo de laminados.</p>
             <div class="card-pres"><span class="pres">Por metro</span><span class="pres">Por rollo</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Tela%20de%20fibra." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Tela de fibra de vidrio" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Tela de fibra de vidrio" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Tela%20de%20fibra." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -455,13 +649,13 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Fibra</span>
-            <img src="fibra-mat.jpg" alt="Fibra de vidrio 300/450" class="card-img" />
+            <img src="fibra-mat.jpg" alt="Mat de fibra de vidrio 300 y 450 g/m²" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Fibra de vidrio 300/450</h3>
             <p class="card-desc">Mat de fibra cortada. Gramajes 300 y 450 g/m² para laminados estándar e industriales.</p>
             <div class="card-pres"><span class="pres">300 g/m²</span><span class="pres">450 g/m²</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Fibra%20de%20vidrio%20300/450." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Fibra de vidrio 300/450" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Fibra de vidrio 300/450" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Fibra%20de%20vidrio%20300/450." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -469,17 +663,19 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Fibra</span>
-            <img src="corematt.jpg" alt="Corematt" class="card-img" />
+            <img src="corematt.jpg" alt="Corematt, núcleo para laminado sándwich" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Corematt</h3>
             <p class="card-desc">Material de núcleo para sándwich estructural. Reduce peso y aumenta la rigidez de la pieza.</p>
             <div class="card-pres"><span class="pres">Por metro</span><span class="pres">Por rollo</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Corematt." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Corematt" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Corematt" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20Corematt." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
       </div>
+      </div>
 
+      <div class="cat-block" data-cat="accesorios">
       <span class="cat-label">Accesorios y herramientas</span>
       <div class="product-grid">
 
@@ -487,13 +683,13 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Accesorio</span>
-            <img src="rodillo.jpg" alt="Rodillo laminador" class="card-img" />
+            <img src="rodillo.jpg" alt="Rodillo laminador para fibra de vidrio" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Rodillo laminador</h3>
             <p class="card-desc">Para aplicación y desgasificación de laminados. Elimina burbujas en fibra y resina.</p>
             <div class="card-pres"><span class="pres">Varios tamaños</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20rodillo." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Rodillo laminador" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Rodillo laminador" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20rodillo." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -501,13 +697,13 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Producto</span>
-            <img src="catalizador.jpg" alt="Limpiador de resina" class="card-img" />
+            <img src="catalizador.jpg" alt="Limpiador de resina" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Limpiador de resina</h3>
             <p class="card-desc">Solvente especializado para limpieza de herramientas y superficies con resina sin curar.</p>
             <div class="card-pres"><span class="pres">Varios formatos</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20limpiador%20de%20resina." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Limpiador de resina" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Limpiador de resina" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20limpiador%20de%20resina." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
 
@@ -515,15 +711,79 @@
         <article class="card reveal">
           <div class="card-illustration">
             <span class="card-tag">Producto</span>
-            <img src="catalizador.jpg" alt="Diluyente" class="card-img" />
+            <img src="catalizador.jpg" alt="Diluyente para resina poliéster" class="card-img" loading="lazy" decoding="async" />
           </div>
           <div class="card-body">
             <h3 class="card-title">Diluyente</h3>
             <p class="card-desc">Para ajustar la viscosidad de resinas poliéster. Control preciso de la consistencia del material.</p>
             <div class="card-pres"><span class="pres">Varios formatos</span></div>
-            <a class="card-cta" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20diluyente." target="_blank" rel="noopener">Consultar precio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <div class="card-actions"><a class="btn btn-meli" data-ml="Diluyente" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a><a class="btn btn-wa" data-track="producto" data-product="Diluyente" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20precio%20de%20diluyente." target="_blank" rel="noopener">Consultar</a></div>
           </div>
         </article>
+      </div>
+      </div>
+
+      <div class="more-products reveal">
+        <div>
+          <h3>También tenemos</h3>
+          <p>Consultanos presentaciones, colores y precio de estos productos.</p>
+          <div class="card-pres"><span class="pres">Epoxi para pisos</span><span class="pres">Pigmentos</span><span class="pres">Gelcoat</span><span class="pres">Cera desmoldante</span></div>
+        </div>
+        <a class="btn btn-wa" data-track="tambien-tenemos" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20consultar%20por%20pigmentos%2C%20gelcoat%20o%20epoxi%20para%20pisos%20y%20ver%20los%20colores." target="_blank" rel="noopener">Ver colores y precios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= PISOS ========= -->
+  <section id="pisos" class="pisos">
+    <div class="wrap pisos-grid">
+      <div class="reveal">
+        <div class="section-num">PISOS EPOXI</div>
+        <h2 class="section-title">Cotizá tu piso en <em>un mensaje</em></h2>
+        <p class="section-intro" style="margin-top: 20px;">Completá estos datos y se arma tu consulta de WhatsApp. Con eso te decimos qué producto y qué cantidad necesitás.</p>
+        <ul class="pisos-steps">
+          <li><b>1</b><span>Medí largo × ancho de cada ambiente y sumalos.</span></li>
+          <li><b>2</b><span>Contanos sobre qué vas a aplicar: carpeta de cemento, cerámica u otra.</span></li>
+          <li><b>3</b><span>Elegí un color o pedinos los colores disponibles.</span></li>
+        </ul>
+      </div>
+      <form class="floor-form reveal" id="floorForm" novalidate>
+        <div class="field"><label for="f-m2">Metros cuadrados</label><input id="f-m2" inputmode="decimal" placeholder="Ej: 25" autocomplete="off"></div>
+        <div class="field"><label for="f-sup">Superficie actual</label>
+          <select id="f-sup"><option>Carpeta de cemento</option><option>Cerámica / porcelanato</option><option>Piso epoxi existente</option><option>Otra / no sé</option></select></div>
+        <div class="field"><label for="f-uso">Lugar</label>
+          <select id="f-uso"><option>Vivienda (interior)</option><option>Garage / cochera</option><option>Local comercial</option><option>Industria / depósito</option><option>Exterior</option></select></div>
+        <div class="field"><label for="f-color">Color</label><input id="f-color" placeholder="Ej: gris, o “quiero ver colores”"></div>
+        <div class="field full"><label for="f-loc">Localidad, para cotizar el envío</label><input id="f-loc" placeholder="Ej: Pilar, Buenos Aires" autocomplete="address-level2"></div>
+        <div class="full"><a class="btn btn-wa" id="floorSend" data-track="form-pisos" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Quiero%20cotizar%20un%20piso%20epoxi." target="_blank" rel="noopener">Enviar consulta por WhatsApp</a></div>
+        <p class="form-hint full">Se abre WhatsApp con tus datos escritos. Revisalos y tocá enviar.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========= CÓMO COMPRAR ========= -->
+  <section id="como-comprar">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <div class="section-num">PASO A PASO</div>
+          <h2 class="section-title">Cómo <em>comprar</em></h2>
+        </div>
+        <p class="section-intro">Comprá online o con atención directa, como te quede más cómodo.</p>
+      </div>
+      <div class="steps-grid">
+        <div class="buy-step reveal"><span class="k">Paso 1</span><h3>Elegí el material</h3><p>Por proyecto o por producto. Si tenés dudas, escribinos y te recomendamos qué usar.</p></div>
+        <div class="buy-step reveal"><span class="k">Paso 2</span><h3>Comprá o pedí precio</h3><p>En Mercado Libre con tu cuenta, o por WhatsApp con precio y envío confirmados.</p></div>
+        <div class="buy-step reveal"><span class="k">Paso 3</span><h3>Retirá o recibilo</h3><p>Retiro en Av. Italia 1219, Tigre, de lunes a viernes de 9 a 16 hs, o envío a todo el país.</p></div>
+      </div>
+
+      <h3 class="faq-title">Preguntas frecuentes</h3>
+      <div class="faq" style="margin-top: 0;">
+        <details><summary>¿Qué diferencia hay entre resina epoxi y poliéster?</summary><p>La epoxi tiene dos componentes (Parte A y Parte B) y se usa en pisos, mesas y arte con resina. La poliéster se cataliza con Catalizador MEK y se usa con fibra de vidrio, en náutica y reparaciones.</p></details>
+        <details><summary>¿Puedo usar resina poliéster sin catalizador?</summary><p>No. La resina poliéster necesita Catalizador MEK para curar. La cantidad depende del producto y de la temperatura: consultá la ficha técnica o preguntanos.</p></details>
+        <details><summary>¿Cuánto material necesito para mi piso?</summary><p>Depende de los metros cuadrados, la superficie y la cantidad de manos. Completá el formulario de pisos y te pasamos la cantidad.</p></details>
+        <details><summary>¿Hacen envíos al interior?</summary><p>Sí, despachamos a todo el país desde Tigre (CP 1648). Podés cotizar el envío con Vía Cargo o pedirnos la cotización por WhatsApp.</p></details>
+        <details><summary>¿Puedo retirar en el local?</summary><p>Sí, en Av. Italia 1219, Tigre, de lunes a viernes de 9 a 16 hs.</p></details>
       </div>
     </div>
   </section>
@@ -718,8 +978,10 @@
         <div class="footer-col">
           <h4>Empresa</h4>
           <ul>
+            <li><a href="#proyectos">¿Qué querés hacer?</a></li>
+            <li><a href="#pisos">Cotizar piso epoxi</a></li>
+            <li><a href="#como-comprar">Cómo comprar</a></li>
             <li><a href="#nosotros">Quiénes somos</a></li>
-            <li><a href="#aplicaciones">Aplicaciones</a></li>
             <li><a href="#contacto">Contacto</a></li>
             <li><a href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Mercado Libre</a></li>
             <li><a href="https://viacargo.com.ar/cotizar-envio/" target="_blank" rel="noopener">Cotizar envío</a></li>
@@ -747,7 +1009,54 @@
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1.1 1-1.1 2.5s1.1 2.9 1.3 3.1c.2.2 2.2 3.4 5.4 4.7 3.2 1.3 3.2.9 3.8.8.6-.1 1.7-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 0C5.4 0 0 5.4 0 12c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.6c1.7.9 3.7 1.5 5.7 1.5 6.6 0 12-5.4 12-12S18.6 0 12 0z"/></svg>
   </a>
 
+  <!-- Barra de compra en celular -->
+  <div class="mobile-bar">
+    <a class="btn btn-meli" data-ml="barra-movil" href="https://listado.mercadolibre.com.ar/_CustId_1337478280" target="_blank" rel="noopener">Comprar</a>
+    <a class="btn btn-wa" data-track="barra-movil" href="https://api.whatsapp.com/send?phone=541171144557&text=Hola!%20Vi%20la%20web%20de%20BARCOPLAST%20y%20quiero%20consultar." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+
   <script>
+    // ===== Medición (un evento por clic; se leen desde Google Tag Manager / GA4) =====
+    window.dataLayer = window.dataLayer || [];
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a) return;
+      if (a.href.indexOf('api.whatsapp.com') !== -1) {
+        window.dataLayer.push({ event: 'whatsapp_click', ubicacion: a.dataset.track || 'otro', producto: a.dataset.product || '' });
+      } else if (a.href.indexOf('mercadolibre.com.ar') !== -1) {
+        window.dataLayer.push({ event: 'mercadolibre_click', ubicacion: a.dataset.ml || 'otro' });
+      }
+    });
+
+    // ===== Filtros de productos =====
+    function setFilter(cat) {
+      document.querySelectorAll('.chip').forEach(function (c) { c.setAttribute('aria-pressed', String(c.dataset.chip === cat)); });
+      document.querySelectorAll('.cat-block').forEach(function (b) { b.hidden = !(cat === 'todos' || b.dataset.cat === cat); });
+    }
+    document.querySelectorAll('.chip').forEach(function (c) { c.addEventListener('click', function () { setFilter(c.dataset.chip); }); });
+    document.querySelectorAll('[data-filter]').forEach(function (a) { a.addEventListener('click', function () { setFilter(a.dataset.filter); }); });
+
+    // ===== Consulta de pisos: arma el mensaje de WhatsApp =====
+    (function () {
+      var form = document.getElementById('floorForm');
+      if (!form) return;
+      var send = document.getElementById('floorSend');
+      function val(id) { return document.getElementById(id).value.trim(); }
+      function update() {
+        var t = 'Hola! Quiero cotizar un piso epoxi.\n' +
+          '• Metros cuadrados: ' + (val('f-m2') || 'a medir') + '\n' +
+          '• Superficie: ' + val('f-sup') + '\n' +
+          '• Lugar: ' + val('f-uso') + '\n' +
+          '• Color: ' + (val('f-color') || 'quiero ver colores');
+        if (val('f-loc')) t += '\n• Localidad: ' + val('f-loc');
+        send.href = 'https://api.whatsapp.com/send?phone=541171144557&text=' + encodeURIComponent(t);
+      }
+      form.addEventListener('input', update);
+      form.addEventListener('change', update);
+      form.addEventListener('submit', function (e) { e.preventDefault(); });
+      update();
+    })();
+
     document.getElementById('year').textContent = new Date().getFullYear();
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
