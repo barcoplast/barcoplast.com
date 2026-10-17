@@ -1,0 +1,16 @@
+# Nunca versionar datos, secretos ni comprobantes
+datos/
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.csr
+*.sqlite
+*.sqlite3
+*.db
+secretos*.toml
+config.toml
+__pycache__/
+*.pyc
+.venv/

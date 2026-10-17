@@ -1,0 +1,4 @@
+# Configuración de GitHub Pages (Jekyll).
+# El sistema de facturación vive en este repositorio pero NO se publica en el sitio.
+exclude:
+  - facturacion
